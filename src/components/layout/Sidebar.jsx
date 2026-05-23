@@ -99,11 +99,11 @@ export default function Sidebar() {
       {/* Desktop Sidebar */}
       <motion.aside
         initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }}
-        className={`hidden lg:flex flex-col fixed left-0 top-0 h-screen z-40 glass-strong transition-all duration-300 ${collapsed ? 'w-20' : 'w-64'}`}
+        className={`hidden lg:flex flex-col fixed left-0 top-0 h-screen z-40 glass-strong transition-all duration-300 overflow-x-hidden ${collapsed ? 'w-20' : 'w-64'}`}
       >
         {/* Logo */}
         <div className="p-5 border-b border-white/[0.06]">
-          <Link to="/dashboard" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-lg font-bold flex-shrink-0">DT</div>
             {!collapsed && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

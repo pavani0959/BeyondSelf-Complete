@@ -53,7 +53,7 @@ export function GlassCard({ children, className = '', glow = '', onClick, animat
       transition={{ duration: 0.5 }}
       whileHover={onClick ? { scale: 1.01 } : {}}
       onClick={onClick}
-      className={`glass-card p-5 ${glow} ${onClick ? 'cursor-pointer' : ''} ${className}`}
+      className={`glass-card p-4 md:p-5 ${glow} ${onClick ? 'cursor-pointer' : ''} ${className}`}
     >
       {children}
     </motion.div>
@@ -102,7 +102,7 @@ export function InsightCard({ insight, index = 0 }) {
 
 export function PageHeader({ title, subtitle, icon }) {
   return (
-    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
+    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-8"className="mb-5">
       <div className="flex items-center gap-3 mb-2">
         {icon && <span className="text-3xl">{icon}</span>}
         <h1 className="text-3xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>{title}</h1>
