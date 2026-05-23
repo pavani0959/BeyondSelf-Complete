@@ -147,11 +147,11 @@ export default function Dashboard() {
   const sleepCascade = crossDomain.find(cd => cd.id === 'sleep-productivity');
 
   return (
-    <div className="p-4 md:p-8 pb-24 lg:pb-8 bg-mesh min-h-screen">
+    <div className="px-8 md:px-12 py-8 pb-24 lg:pb-8 bg-mesh min-h-screen">
       <PageHeader title="Your Digital Twin Today" subtitle={`Welcome back, ${user?.name || 'User'}. Here's your AI-powered life overview.`} icon="🧬" />
 
       {/* Digital Twin Summary Banner */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-6">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
         <div className="glass-card p-5 rounded-2xl border border-white/[0.06]" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.05) 50%, rgba(6,182,212,0.05) 100%)' }}>
           <div className="flex items-start gap-4 mb-4">
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center text-2xl flex-shrink-0">🧬</div>
@@ -228,7 +228,7 @@ export default function Dashboard() {
       )}
 
       {/* Score Rings */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10">
         <GlassCard className="flex justify-center" glow="glow-emerald">
           <ScoreRing score={healthScore} color="auto" label="Health" delay={0} />
         </GlassCard>
